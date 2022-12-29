@@ -4,16 +4,9 @@ var wavesurfer = WaveSurfer.create({
     progressColor: 'blue',
     responsive: 'true',
     plugins: [
-        WaveSurfer.cursor.create({  // <-- here
-            showTime: true,
-            opacity: 1,
-            customShowTimeStyle: {
-                'background-color': '#000',
-                color: '#fff',
-                padding: '2px',
-                'font-size': '10px'
-            }
-        }),
+        RegionsPlugin.create({
+            wavesurfer: wavesurfer,
+        })
     ]
 });
 
